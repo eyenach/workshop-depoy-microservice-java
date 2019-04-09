@@ -6,7 +6,7 @@
 
 ## Step 1 :: Clone project
 ```
-$git clone https://github.com/up1/workshop-depoy-microservice-java.git
+$git clone https://github.com/eyenach/workshop-depoy-microservice-java.git
 $cd workshop-depoy-microservice-java
 #ls
 
@@ -32,15 +32,16 @@ $docker image ls
 $docker login
 Login Succeeded
 
-$docker image tag catalog_service:1.0 <username>/catalog_service:1.0
-$docker image push <username>/catalog_service:1.0
+$docker image tag catalog_service:1.0 eyenach/catalog_service:1.0
+$docker image push eyenach/catalog_service:1.0
 
-$docker image tag product_service:1.0 <username>/product_service:1.0
-$docker image push <username>/product_service:1.0
+$docker image tag product_service:1.0 eyenach/product_service:1.0
+$docker image push eyenach/product_service:1.0
 ```
 
 ## Step 5 :: Deploy container with Docker compose
 ```
+$cd ..
 $docker-compose up -d
 $docker-compose ps
                    Name                             Command             State              Ports
